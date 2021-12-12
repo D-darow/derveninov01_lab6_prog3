@@ -6,7 +6,10 @@ namespace derveninov01_lab6_prog3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            bus my_bus = new bus(0, 0, 25);
+            my_bus.init_bus();
+            my_bus.add_passenger();
+            my_bus.print_bus();
         }
     }
 }
