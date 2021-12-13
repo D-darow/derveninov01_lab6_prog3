@@ -8,9 +8,12 @@ namespace derveninov01_lab6_prog3
 {
     public class driver
     {
-        private string name; // Имя
-        private string surname; // Фамилия
-        private string phone_number; // Номер телефона
+		// Имя
+		private string name { get; set; }
+		// Фамилия
+		private string surname { get; set; }
+		// Номер телефона
+		private string phone_number { get; set; }
 
 		// Конструктор по умолчанию
 		public driver()
@@ -25,36 +28,6 @@ namespace derveninov01_lab6_prog3
 			this.name = name;
 			this.surname = surname;
 			this.phone_number = phone_number;
-		}
-		// Установка имени
-		public void set_name(string name)
-		{
-			this.name = name;
-		}
-		// Получение имени
-		public string get_name()
-		{
-			return name;
-		}
-		// Установка фамилии
-		public void set_surname(string surname)
-		{
-			this.surname = surname;
-		}
-		// Получение фамилии
-		public string get_surname()
-		{
-			return surname;
-		}
-		// Установка номера телефона
-		public void set_phone_number(string phone_number)
-		{
-			this.phone_number = phone_number;
-		}
-		// Получение номера телефона
-		public string get_phone_number()
-		{
-			return phone_number;
 		}
 		// Ввод информации о водителе
 		public void input_driver()

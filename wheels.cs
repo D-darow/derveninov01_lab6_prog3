@@ -8,8 +8,10 @@ namespace derveninov01_lab6_prog3
 {
     public class wheels
     {
-        private int diameter_of_disk; // Диаметр колеса (В дюймах)
-        private int width_of_tire; // Ширина шины (В мм)
+		// Диаметр колеса (В дюймах)
+		private int diameter_of_disk { get; set; }
+		// Ширина шины (В мм)
+		private int width_of_tire { get; set; }
 
 		// Конструктор по умолчанию
 		public wheels()
@@ -22,26 +24,6 @@ namespace derveninov01_lab6_prog3
 		{
 			this.diameter_of_disk = diametr_of_disk;
 			this.width_of_tire = width_of_tire;
-		}
-		// Установка диаметра колеса
-		public void set_diametr_of_disk(int diametr_of_disk)
-		{
-			this.diameter_of_disk = diametr_of_disk;
-		}
-		// Получение диаметра колеса
-		public int get_diametr_of_disk()
-		{
-			return diameter_of_disk;
-		}
-		// Установка ширины шины
-		public void set_width_of_tire(int width_of_tire)
-		{
-			this.width_of_tire = width_of_tire;
-		}
-		// Получение ширины шины
-		public int get_width_of_tire()
-		{
-			return width_of_tire;
 		}
 		// Ввод информации о колесах
 		public void input_wheels()

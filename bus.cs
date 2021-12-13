@@ -8,12 +8,14 @@ namespace derveninov01_lab6_prog3
 {
     public class bus
     {
-		private int bus_num; // Номер автобуса
+		// Номер автобуса
+		private int bus_num { get; set; }
 		private int num_of_seats; // Занятые места (max 32)
 		private engine bus_engine;
 		private wheels bus_wheels;
 		private driver bus_driver;
-		private int price; // Цена проезда (Руб)
+		// Цена проезда (Руб)
+		private int price { get; set; }
 		private int sum; // Сумма заработанных денег
 
 		// Конструктор
@@ -27,26 +29,6 @@ namespace derveninov01_lab6_prog3
 			bus_engine = new engine();
 			bus_wheels = new wheels();
 			bus_driver = new driver();
-		}
-		// Установка номера автобуса
-		public void set_bus_num(int bus_num)
-		{
-			this.bus_num = bus_num;
-		}
-		// Получение номера автобуса
-		public int get_bus_num()
-		{
-			return bus_num;
-		}
-		// Установка цены проезда
-		public void set_price(int price)
-		{
-			this.price = price;
-		}
-		// Получение цены проезда
-		public int get_price()
-		{
-			return price;
 		}
 		// Добавить пассажира
 		public int add_passenger()

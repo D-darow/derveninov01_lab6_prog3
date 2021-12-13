@@ -8,9 +8,30 @@ namespace derveninov01_lab6_prog3
 {
     public class engine
     {
-        private int hs_power; // Лошадиные силы
-        private int fuel; // Род топлива
-        private int num_of_cylinders; // Количество цилиндров (от 2 до 16)
+		// Лошадиные силы
+		private int hs_power { get; set; }
+		// Род топлива
+		private int fuel 
+		{ 
+			get { return fuel; }
+			set 
+			{
+				if (value < 1 || value > 2)
+					throw new ArgumentOutOfRangeException($"{nameof(value)} должен быть между 1 и 2");
+				fuel = value;
+			}
+		}
+		// Количество цилиндров (от 2 до 16)
+		private int num_of_cylinders
+        {
+			get { return num_of_cylinders; }
+			set
+            {
+				if (value < 2 || value > 16)
+					throw new ArgumentOutOfRangeException($"{nameof(value)} должен быть между 2 и 16");
+				num_of_cylinders = value;
+            }
+        }
 		// Конструтор по умолчанию
 		public engine()
 		{
@@ -24,36 +45,6 @@ namespace derveninov01_lab6_prog3
 			this.hs_power = hs_power;
 			this.fuel = fuel;
 			this.num_of_cylinders = num_of_cylinders;
-		}
-		// Установка лошадиных сил
-		public void set_hs_power(int hs_power)
-		{
-			this.hs_power = hs_power;
-		}
-		// Получение лошадиных сил
-		public int get_hs_power()
-		{
-			return hs_power;
-		}
-		// Установка рода топлива
-		public void set_fuel(int fuel)
-		{
-			this.fuel = fuel;
-		}
-		// Получение рода топлива
-		public int get_fuel()
-		{
-			return fuel;
-		}
-		// Установка количества цилиндров
-		public void set_num_of_cylinders(int num_of_cylinders)
-		{
-			this.num_of_cylinders = num_of_cylinders;
-		}
-		// Получение количества цилиндров
-		public int get_num_of_cylinders()
-		{
-			return num_of_cylinders;
 		}
 		// Ввод информации о двигателе
 		public void input_engine()
