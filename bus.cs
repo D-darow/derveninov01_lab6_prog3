@@ -9,14 +9,29 @@ namespace derveninov01_lab6_prog3
     public class bus
     {
 		// Номер автобуса
-		private int bus_num { get; init; }
+		private int bus_num;
+		public int _bus_num
+		{
+			get { return bus_num; }
+			set { bus_num = value; }
+		}
 		private int num_of_seats; // Занятые места (max 32)
 		private engine bus_engine;
 		private wheels bus_wheels;
 		private driver bus_driver;
 		// Цена проезда (Руб)
-		private int price { get; init; }
+		private int price;
+		public int _price
+		{
+			get { return price; }
+			set { price = value; }
+		}
 		private int sum; // Сумма заработанных денег
+		public int _sum
+		{
+			get { return sum; }
+			set { sum = value; }
+		}
 
 		// Конструктор
 		public bus(int bus_num, int num_of_seats,
