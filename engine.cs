@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace derveninov01_lab6_prog3
 {
-    public class engine
+    public struct engine
     {
 		// Лошадиные силы
-		private int hs_power { get; set; }
+		private int hs_power { get; init; }
 		// Род топлива
 		private int fuel 
 		{ 
 			get { return fuel; }
-			set 
+			init 
 			{
 				if (value < 1 || value > 2)
 					throw new ArgumentOutOfRangeException($"{nameof(value)} должен быть между 1 и 2");
@@ -25,54 +25,19 @@ namespace derveninov01_lab6_prog3
 		private int num_of_cylinders
         {
 			get { return num_of_cylinders; }
-			set
+			init
             {
 				if (value < 2 || value > 16)
 					throw new ArgumentOutOfRangeException($"{nameof(value)} должен быть между 2 и 16");
 				num_of_cylinders = value;
             }
         }
-		// Конструтор по умолчанию
-		public engine()
-		{
-			hs_power = 0;
-			fuel = 1;
-			num_of_cylinders = 2;
-		}
 		// Конструктор
 		public engine(int hs_power, int fuel, int num_of_cylinders)
 		{
 			this.hs_power = hs_power;
 			this.fuel = fuel;
 			this.num_of_cylinders = num_of_cylinders;
-		}
-		// Ввод информации о двигателе
-		public void input_engine()
-		{
-			int flag = 0;
-			do
-			{
-				if (flag == 0) Console.WriteLine("Введите кол-во лошадиных сил:");
-				if (flag == 1) Console.WriteLine("Ошибка. Введите кол-во лошадиных сил:");
-				hs_power = Convert.ToInt32(Console.ReadLine());
-				flag = 1;
-			} while (hs_power < 0);
-			flag = 0;
-			do
-			{
-				if (flag == 0) Console.WriteLine("Выберите род топлива (1 - бензин, 2 - дизель): ");
-				if (flag == 1) Console.WriteLine("Ошибка. Выберите род топлива (1 - бензин, 2 - дизель): ");
-				fuel = Convert.ToInt32(Console.ReadLine());
-				flag = 1;
-			} while (fuel < 1 || fuel > 2);
-			flag = 0;
-			do
-			{
-				if (flag == 0) Console.WriteLine("Введите кол-во цилиндров двигателя (2 - 16): ");
-				if (flag == 1) Console.WriteLine("Ошибка. Введите кол-во цилиндров двигателя (2 - 16): ");
-				num_of_cylinders = Convert.ToInt32(Console.ReadLine());
-				flag = 1;
-			} while (num_of_cylinders < 2 || num_of_cylinders > 16);
 		}
 		// Вывод информации о двигателе
 		public void print_engine()

@@ -6,8 +6,7 @@ namespace derveninov01_lab6_prog3
     {
         static void Main(string[] args)
         {
-            bus my_bus = new bus(0, 0, 25);
-            my_bus.init_bus();
+            bus my_bus = new bus(1, 0, 25, 300, 2, 8, 50, 25, "Валерий", "Петров", "893452135");
             my_bus.add_passenger();
             my_bus.print_bus();
         }

@@ -9,26 +9,27 @@ namespace derveninov01_lab6_prog3
     public class bus
     {
 		// Номер автобуса
-		private int bus_num { get; set; }
+		private int bus_num { get; init; }
 		private int num_of_seats; // Занятые места (max 32)
 		private engine bus_engine;
 		private wheels bus_wheels;
 		private driver bus_driver;
 		// Цена проезда (Руб)
-		private int price { get; set; }
+		private int price { get; init; }
 		private int sum; // Сумма заработанных денег
 
 		// Конструктор
 		public bus(int bus_num, int num_of_seats,
-			int price)
+			int price, int hs_power, int fuel, int num_of_cylinders,
+			int diametr_of_disk, int width_of_tire, string name, string surname, string phone_number)
 		{
 			this.bus_num = bus_num;
 			this.num_of_seats = num_of_seats;
 			this.price = price;
 			sum = 0;
-			bus_engine = new engine();
-			bus_wheels = new wheels();
-			bus_driver = new driver();
+			engine bus_engine = new engine(hs_power, fuel, num_of_cylinders);
+			wheels bus_wheels = new wheels(diametr_of_disk, width_of_tire);
+			driver bus_driver = new driver(name, surname, phone_number);
 		}
 		// Добавить пассажира
 		public int add_passenger()
@@ -62,29 +63,6 @@ namespace derveninov01_lab6_prog3
 				return -1;
 			}
 			return 0;
-		}
-		// Ввод информации об автобусе
-		public void init_bus()
-		{
-			int flag = 0;
-			do
-			{
-				if (flag == 0) Console.WriteLine("Введите номер автобуса: ");
-				if (flag == 1) Console.WriteLine("Ошибка. Введите номер автобуса: ");
-				bus_num = Convert.ToInt32(Console.ReadLine());
-				flag = 1;
-			} while (bus_num < 0);
-			flag = 0;
-			do
-			{
-				if (flag == 0) Console.WriteLine("Введите цену проезда: ");
-				if (flag == 1) Console.WriteLine("Ошибка. Введите цену проезда: ");
-				price = Convert.ToInt32(Console.ReadLine());
-				flag = 1;
-			} while (price < 0);
-			bus_engine.input_engine();
-			bus_wheels.input_wheels();
-			bus_driver.input_driver();
 		}
 		// Вывод информации об автобусе
 		public void print_bus()

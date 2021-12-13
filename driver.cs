@@ -6,38 +6,21 @@ using System.Threading.Tasks;
 
 namespace derveninov01_lab6_prog3
 {
-    public class driver
+    public struct driver
     {
 		// Имя
-		private string name { get; set; }
+		private string name { get; init; }
 		// Фамилия
-		private string surname { get; set; }
+		private string surname { get; init; }
 		// Номер телефона
-		private string phone_number { get; set; }
+		private string phone_number { get; init; }
 
-		// Конструктор по умолчанию
-		public driver()
-		{
-			name = null;
-			surname = null;
-			phone_number = null;
-		}
 		// Конструктор
 		public driver(string name, string surname, string phone_number)
 		{
 			this.name = name;
 			this.surname = surname;
 			this.phone_number = phone_number;
-		}
-		// Ввод информации о водителе
-		public void input_driver()
-		{
-			Console.WriteLine("Введите имя водителя: ");
-			name = Console.ReadLine();
-			Console.WriteLine("Введите фамилию водителя: ");
-			surname = Console.ReadLine();
-			Console.WriteLine("Введите номер телефона водителя: ");
-			phone_number = Console.ReadLine();
 		}
 		// Вывод информации о водителе
 		public void print_driver()
