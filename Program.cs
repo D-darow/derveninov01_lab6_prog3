@@ -15,10 +15,10 @@ namespace derveninov01_lab6_prog3
             bus_arr[1].add_passenger();
             // Перегрузка оператора +
             int sum12 = bus_arr[0] + bus_arr[1];
+            Console.WriteLine("Сумма 1 автобуса + Сумма 2 автобуса = " + sum12);
             // Перегрузка оператора ++
-            Console.WriteLine(sum12);
-            Console.WriteLine(bus_arr[0]._sum);
-            Console.WriteLine(bus_arr[0]++._sum);
+            Console.WriteLine("Сумма первого автобуса = " + bus_arr[0]._sum);
+            Console.WriteLine("(Первый автобус)++ = " + bus_arr[0]++._sum);
         }
     }
 }
