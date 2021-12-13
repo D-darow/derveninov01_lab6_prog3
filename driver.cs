@@ -9,11 +9,26 @@ namespace derveninov01_lab6_prog3
     public class driver
     {
 		// Имя
-		private string name { get; set; }
+		private string name;
+		public string _name 
+		{
+			get { return name; }
+			set { name = value; }
+		}
 		// Фамилия
-		private string surname { get; set; }
+		private string surname;
+		public string _surname
+        {
+			get { return surname; }
+			set { surname = value; }
+        }
 		// Номер телефона
-		private string phone_number { get; set; }
+		private string phone_number;
+		public string _phone_number
+        {
+			get { return phone_number; }
+			set { phone_number = value; }
+        }
 
 		// Конструктор по умолчанию
 		public driver()

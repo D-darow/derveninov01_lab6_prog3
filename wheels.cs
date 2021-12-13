@@ -9,9 +9,19 @@ namespace derveninov01_lab6_prog3
     public class wheels
     {
 		// Диаметр колеса (В дюймах)
-		private int diameter_of_disk { get; set; }
+		private int diameter_of_disk;
+		public int _diameter_of_disk
+        {
+			get { return diameter_of_disk; }
+			set { diameter_of_disk = value; }
+        }
 		// Ширина шины (В мм)
-		private int width_of_tire { get; set; }
+		private int width_of_tire;
+		public int _width_of_tire
+        {
+			get { return width_of_tire; }
+			set { width_of_tire = value; }
+        }
 
 		// Конструктор по умолчанию
 		public wheels()
