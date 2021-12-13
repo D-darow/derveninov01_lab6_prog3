@@ -20,16 +20,16 @@ namespace derveninov01_lab6_prog3
 			phone_number = null;
 		}
 		// Конструктор
-		public driver(string name_in, string surname_in, string phone_number_in)
+		public driver(string name, string surname, string phone_number)
 		{
-			name = name_in;
-			surname = surname_in;
-			phone_number = phone_number_in;
+			this.name = name;
+			this.surname = surname;
+			this.phone_number = phone_number;
 		}
 		// Установка имени
-		public void set_name(string name_in)
+		public void set_name(string name)
 		{
-			name = name_in;
+			this.name = name;
 		}
 		// Получение имени
 		public string get_name()
@@ -37,9 +37,9 @@ namespace derveninov01_lab6_prog3
 			return name;
 		}
 		// Установка фамилии
-		public void set_surname(string surname_in)
+		public void set_surname(string surname)
 		{
-			surname = surname_in;
+			this.surname = surname;
 		}
 		// Получение фамилии
 		public string get_surname()
@@ -47,9 +47,9 @@ namespace derveninov01_lab6_prog3
 			return surname;
 		}
 		// Установка номера телефона
-		public void set_phone_number(string phone_number_in)
+		public void set_phone_number(string phone_number)
 		{
-			phone_number = phone_number_in;
+			this.phone_number = phone_number;
 		}
 		// Получение номера телефона
 		public string get_phone_number()

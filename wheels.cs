@@ -18,15 +18,15 @@ namespace derveninov01_lab6_prog3
 			width_of_tire = 0;
 		}
 		// Конструктор
-		public wheels(int diametr, int width)
+		public wheels(int diametr_of_disk, int width_of_tire)
 		{
-			diameter_of_disk = diametr;
-			width_of_tire = width;
+			this.diameter_of_disk = diametr_of_disk;
+			this.width_of_tire = width_of_tire;
 		}
 		// Установка диаметра колеса
-		public void set_diametr_of_disk(int diametr)
+		public void set_diametr_of_disk(int diametr_of_disk)
 		{
-			diameter_of_disk = diametr;
+			this.diameter_of_disk = diametr_of_disk;
 		}
 		// Получение диаметра колеса
 		public int get_diametr_of_disk()
@@ -34,9 +34,9 @@ namespace derveninov01_lab6_prog3
 			return diameter_of_disk;
 		}
 		// Установка ширины шины
-		public void set_width_of_tire(int width)
+		public void set_width_of_tire(int width_of_tire)
 		{
-			width_of_tire = width;
+			this.width_of_tire = width_of_tire;
 		}
 		// Получение ширины шины
 		public int get_width_of_tire()
