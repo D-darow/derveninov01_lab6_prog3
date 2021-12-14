@@ -19,6 +19,7 @@ namespace derveninov01_lab6_prog3
 		private engine bus_engine;
 		private wheels bus_wheels;
 		private driver bus_driver;
+		private static int total_sum; // Общая сумма зар. денег со всех автобусов
 		// Цена проезда (Руб)
 		private int price;
 		public int _price
@@ -53,6 +54,7 @@ namespace derveninov01_lab6_prog3
 				num_of_seats += 1;
 				int seats_left = 32 - num_of_seats;
 				sum += price;
+				total_sum += price;
 				Console.WriteLine("\nПассажир успешно зашел в автобус и оплатил проезд.\nСвободных мест осталось: " + seats_left + "\n");
 			}
 			else
@@ -124,5 +126,15 @@ namespace derveninov01_lab6_prog3
 			b1.sum += b1.price;
 			return b1;
         }
+		// Получение общей суммы зар. денег
+		public static int get_total_sum()
+		{
+			return total_sum;
+		}
+		// Установка общей суммы зар. денег
+		public static void set_total_sum(int total)
+		{
+			total_sum = total;
+		}
 	}
 }
