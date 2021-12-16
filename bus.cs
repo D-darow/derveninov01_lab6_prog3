@@ -80,7 +80,7 @@ namespace derveninov01_lab6_prog3
 			}
 			else
 			{
-				Console.WriteLine("\nПассажир не смог занять место. Автобус переолнен.\n");
+				//Console.WriteLine("\nПассажир не смог занять место. Автобус переолнен.\n");
 				return -1;
 			}
 			return 0;
@@ -96,7 +96,7 @@ namespace derveninov01_lab6_prog3
 			}
 			else
 			{
-				Console.WriteLine("\nОшибка. Автобус пуст.\n");
+				//Console.WriteLine("\nОшибка. Автобус пуст.\n");
 				return -1;
 			}
 			return 0;
