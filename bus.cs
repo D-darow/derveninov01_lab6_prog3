@@ -33,14 +33,35 @@ namespace derveninov01_lab6_prog3
 			get { return sum; }
 			set { sum = value; }
         }
-
-		// Конструктор
-		public bus(int bus_num, int num_of_seats,
-			int price)
+		// Конструктор без параметров
+		public bus()
+		{
+			bus_num = 0;
+			num_of_seats = 0;
+			price = 0;
+			sum = 0;
+			bus_engine = new engine();
+			bus_wheels = new wheels();
+			bus_driver = new driver();
+		}
+		// Конструктор со всеми параметрами
+		public bus(int bus_num, int num_of_seats, int price, int hs_power, int fuel, int num_of_cylinders,
+		int diametr_of_disk, int width_of_tire, String name, String surname, String phone_number)
 		{
 			this.bus_num = bus_num;
 			this.num_of_seats = num_of_seats;
 			this.price = price;
+			sum = 0;
+			bus_engine = new engine(hs_power, fuel, num_of_cylinders);
+			bus_wheels = new wheels(diametr_of_disk, width_of_tire);
+			bus_driver = new driver(name, surname, phone_number);
+		}
+		// Конструктор с одним параметром
+		public bus(int bus_num)
+		{
+			this.bus_num = bus_num;
+			num_of_seats = 0;
+			price = 0;
 			sum = 0;
 			bus_engine = new engine();
 			bus_wheels = new wheels();
