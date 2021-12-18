@@ -89,8 +89,7 @@ namespace derveninov01_lab6_prog3
 		// Вывод информации о двигателе
 		public void print_engine()
 		{
-			Console.WriteLine("\nКол-во лошадиных сил: ");
-			Console.WriteLine(hs_power);
+			Console.WriteLine("\nКол-во лошадиных сил: " + hs_power);
 			Console.WriteLine("Род топлива: ");
 			if (fuel == 1)
 			{
@@ -100,8 +99,7 @@ namespace derveninov01_lab6_prog3
 			{
 				Console.WriteLine("Дизель");
 			}
-			Console.WriteLine("Количество цилиндров:");
-			Console.WriteLine(num_of_cylinders);
+			Console.WriteLine("Количество цилиндров: " + num_of_cylinders);
 		}
 	}
 }

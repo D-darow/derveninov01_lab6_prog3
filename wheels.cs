@@ -58,10 +58,8 @@ namespace derveninov01_lab6_prog3
 		// Вывод информации о колесах
 		public void print_wheels()
 		{
-			Console.WriteLine("Диаметр колеса (В дюймах): ");
-			Console.WriteLine(diameter_of_disk);
-			Console.WriteLine("Ширина шины (В мм): ");
-			Console.WriteLine(width_of_tire);
+			Console.WriteLine("Диаметр колеса (В дюймах): " + diameter_of_disk);
+			Console.WriteLine("Ширина шины (В мм): " + width_of_tire);
 		}
 	}
 }

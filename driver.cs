@@ -9,21 +9,21 @@ namespace derveninov01_lab6_prog3
     public class driver
     {
 		// Имя
-		private string name;
+		protected string name;
 		public string _name 
 		{
 			get { return name; }
 			set { name = value; }
 		}
 		// Фамилия
-		private string surname;
+		protected string surname;
 		public string _surname
         {
 			get { return surname; }
 			set { surname = value; }
         }
 		// Номер телефона
-		private string phone_number;
+		protected string phone_number;
 		public string _phone_number
         {
 			get { return phone_number; }
@@ -57,12 +57,9 @@ namespace derveninov01_lab6_prog3
 		// Вывод информации о водителе
 		public void print_driver()
 		{
-			Console.WriteLine("\nИмя водителя: ");
-			Console.WriteLine(name);
-			Console.WriteLine("Фамилия водителя: ");
-			Console.WriteLine(surname);
-			Console.WriteLine("Номер телефона водителя: ");
-			Console.WriteLine(phone_number);
+			Console.WriteLine("\nИмя водителя: " + name);
+			Console.WriteLine("Фамилия водителя: " + surname);
+			Console.WriteLine("Номер телефона водителя: " + phone_number);
 		}
 	}
 }
